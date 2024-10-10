@@ -1,0 +1,259 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0a0a1f 0%, #1a1a3a 25%, #0f0f2f 50%, #050510 75%, #000000 100%);
+}
+
+.payment-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px; /* Reduced border radius */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+    padding: 20px; /* Reduced padding */
+    width: 800px; /* Reduced width */
+    max-width: 100%; /* Responsive width */
+    height: 90vh; /* Let the form expand naturally */
+    margin: auto; /* Centering */
+}
+
+.secure-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.secure-section span{
+    color: #fff;
+
+}
+
+.secure-section img {
+    margin-right: 10px; /* Reduced space */
+    width: 30px; /* Reduced icon size */
+    height: 30px;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Reduced margin */
+    gap: 10px; /* Reduced spacing between buttons */
+    height: 70px;
+}
+
+.payment-methods button {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px; /* Reduced padding */
+    border-radius: 5px; /* Smaller border radius */
+    cursor: pointer;
+    font-size: 1rem; /* Smaller font size */
+    width: 50%;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Add transition */
+}
+
+/* Hover effect for the payment method buttons */
+.payment-methods button:hover {
+    background-color: #e0e0e0; /* Slightly darker background on hover */
+    border-color: #ccc; /* Darker border on hover */
+}
+
+/* Active effect when the button is clicked (optional, for user feedback) */
+.payment-methods button:active {
+    background-color: #d0d0d0; /* Darker color when button is clicked */
+    border-color: #bbb; /* Darker border */
+}
+
+
+.number {
+    display: flex;
+    gap: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Reduced margin between fields */
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.form-group-cvc{
+    margin-bottom: 15px; /* Reduced margin between fields */
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+.form-group-expi{
+    margin-bottom: 15px; /* Reduced margin between fields */
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px; /* Smaller space between label and input */
+    font-size: 1.2rem; /* Reduced font size */
+}
+
+input {
+    width: 100%;
+    padding: 10px; /* Reduced padding */
+    margin-bottom: 5px;
+    border: 1px solid #ccc; /* Thinner border */
+    border-radius: 5px; /* Smaller border radius */
+    font-size: 1.2rem; /* Smaller input font size */
+}
+
+input[readonly] {
+    background-color: #e9e9e9;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.card-icons img {
+    margin-right: 10px; /* Reduced spacing between card icons */
+    width: 30px; /* Reduced icon size */
+    height: auto;
+}
+.pembayaran{
+    /* background-color: aqua; */
+    width: 60%;
+}
+.bayar{
+    display: flex;
+    max-width: 100%;
+    gap: 40px;
+    color: #fff;
+    /* justify-content: center; */
+}
+.bayar h2{
+    font-size: 25px;
+    
+}
+.total-pembayaran {
+    background: linear-gradient(135deg, #0a0a1f 0%, #1a1a3a 25%, #0f0f2f 50%, #050510 75%, #000000 100%);
+    width: 35%;
+    height: 280px;
+    border-radius: 10px;
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Ensures text is centered */
+    margin: 0 auto; /* Center the entire container on the page */
+}
+.dana-bayar{
+    margin-left: 14px;
+}
+.qris-pembayaran{
+    margin-left: 25px;
+}
+
+
+.total-pembayaran p {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.total-pembayaran h1 {
+    font-size: 25px;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.total-pembayaran .total {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.total-pembayaran .total p {
+    margin: 0;
+}
+.btn-card {
+    background: rgba(122, 28, 172, 0.2);
+    color: white;
+    padding: 15px; /* Reduced padding */
+    width: 35%;
+    border: none;
+    border-radius: 10px; /* Smaller border radius */
+    cursor: pointer;
+    font-size: 1.2rem; /* Smaller font size */
+    margin-top: 14px;
+    margin-left: 65%;
+    
+}
+
+.btn-card:hover {
+    background: linear-gradient(135deg, #0a0a1f 0%, #1a1a3a 25%, #0f0f2f 50%, #050510 75%, #000000 100%);
+}
+
+
+.form-group.inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group.inline .input-wrapper {
+    width: 48%;
+}
+
+.input-wrapper label {
+    margin-bottom: 3px;
+}
+
+.form-group.inline input {
+    width: 100%;
+}
+
+
+/* Gopay */
+.btn-gopay {
+    background: rgba(122, 28, 172, 0.2);
+    color: white;
+    padding: 15px; /* Reduced padding */
+    width: 35%;
+    border: none;
+    border-radius: 5px; /* Smaller border radius */
+    cursor: pointer;
+    font-size: 1.2rem; /* Smaller font size */
+    margin-top: 12px;
+    margin-left: 62%;
+
+    
+}
+
+.btn-gopay:hover {
+    background: linear-gradient(135deg, #0a0a1f 0%, #1a1a3a 25%, #0f0f2f 50%, #050510 75%, #000000 100%);
+
+}
+.GoPay{
+    margin-top: -1rem;
+}
+
+.img-gopay{
+    height: 50px;
+    width: 50px;
+    margin-left: -16px;
+    margin-top: -20px;
+    border: 10px;
+}
+
+
+
+
+
+/* .bayar-gopay{
+    display: flex;
+    max-width: 100%;
+    gap: 10px;
+} */

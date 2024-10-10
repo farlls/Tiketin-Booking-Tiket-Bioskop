@@ -1,9 +1,14 @@
-// src/components/MovieCard.js
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate
 
-const MovieCard = ({ movie, onBook }) => {
+const MovieCard = ({ movie }) => {
+    const navigate = useNavigate();  // Inisialisasi useNavigate
+
+    const handleBookClick = () => {
+        // Mengarahkan ke halaman booking dengan parameter movie title
+        navigate(`/booking?movie=${movie.title}`);
+    };
+
     return (
         <div className="col-8 col-sm-auto col-md-auto mb-4">
             <div className="card card-glass h-100" style={{ width: '18rem' }}>
@@ -13,11 +18,10 @@ const MovieCard = ({ movie, onBook }) => {
                     <p className="rating">{movie.rating}</p>
                     <p className="card-text">{movie.description}</p>
                     <button
-                        className="btn btn-glass"
-                        data-bs-toggle="modal"
-                        data-bs-target="#bookingModal"
-                        // onClick={() => onBook(movie.title)}
-                    >
+                        type="button"
+                        className="btn btn-glass-primary"
+                        onClick={handleBookClick} // Call handleBookClick when the button is clicked
+                        >
                         Book Ticket
                     </button>
                 </div>
