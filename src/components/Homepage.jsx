@@ -1,9 +1,12 @@
 import "./styles/homepage.css";
 import React from "react";
-import { movies } from './Data/datamovie';
-import MovieCard from './controller/MovieCard'
+import { movies } from "./Data/datamovie";
+import MovieCard from "./controller/MovieCard";
 import "bootstrap/dist/css/bootstrap.min.css";
-function Hompage() {
+import { Carousel } from 'react-responsive-3d-carousel'
+
+
+function Homepage() {
   return (
     <div>
       <nav className="navbar sticky-top navbar-expand-lg navbar-glass">
@@ -12,12 +15,7 @@ function Hompage() {
             className="navbar-brand col-7 d-inline-flex align-items-center gap-1"
             href="#"
           >
-            <img
-              src="/assets/Logo.svg"
-              alt="Tickets"
-              width="30"
-              height="30"
-            />
+            <img src="/assets/Logo.svg" alt="Tickets" width="30" height="30" />
             Tiketin.
           </a>
           <button
@@ -31,7 +29,10 @@ function Hompage() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <div
+            className="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
             <form className="d-flex my-2 my-xl-0" role="search">
               <input
                 className="form-control"
@@ -54,7 +55,7 @@ function Hompage() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                Tickets
+                  Tickets
                 </a>
               </li>
             </ul>
@@ -63,23 +64,47 @@ function Hompage() {
       </nav>
 
       <main>
-        <section className="container-fluid">
-          <div className="row my-4 p-5">
+        {/* <section className="container-fluid">
+          <div className="row my-10 p-5">
             <div className="d.flex flex-column align-items-center">
-              <h1 className="glowing-text">
+              <h2 className="glowing-text">
                 Apa yang ingin <br /> Anda tonton hari ini ?
-              </h1>
+              </h2>
             </div>
+          </div>
+        </section> */}
+
+        {/* Carousel Section */}
+        <section className="carousel">
+        <div style={{margin: '0 auto', marginBottom: '100px', marginTop: '50px' }}>
+            <Carousel
+              autoPlay
+              infiniteLoop
+              showArrows
+              showThumbs
+              showStatus
+              spread="wide"
+              interval={3000}
+              transitionTime={500}
+              width="600px"
+              height="350px"
+              indicatorsSize="small"
+              depth={2}
+            >
+              {movies.map((item) => (
+                <div key={item.title}>
+                  <img src={item.image} alt={item.caption} />
+                </div>
+              ))}
+            </Carousel>
           </div>
         </section>
 
-        <section className="container-fluid px-xl-5 px-sm-4">
-          <div
-            className="row justify-content-xl-start justify-content-center"
-          >
+        <section className="container-fluid px-xl-3 px-sm-5 justify-content-center">
+          <div className="row justify-content-xl-start ">
             {movies.map((movie, index) => (
-                    <MovieCard key={index} movie={movie} />
-                ))}
+              <MovieCard key={index} movie={movie} />
+            ))}
           </div>
         </section>
 
@@ -164,4 +189,4 @@ function Hompage() {
   );
 }
 
-export default Hompage;
+export default Homepage;
