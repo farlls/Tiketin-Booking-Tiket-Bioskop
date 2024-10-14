@@ -1,10 +1,11 @@
 import "./styles/homepage.css";
 import React from "react";
+import { carousel } from "./Data/datamovie";
 import { movies } from "./Data/datamovie";
 import MovieCard from "./controller/MovieCard";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Carousel } from 'react-responsive-3d-carousel'
-
+import { Carousel } from "react-responsive-3d-carousel";
+import { Link } from "react-router-dom";
 
 function Homepage() {
   return (
@@ -54,9 +55,9 @@ function Homepage() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/ticket">
                   Tickets
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -76,7 +77,13 @@ function Homepage() {
 
         {/* Carousel Section */}
         <section className="carousel">
-        <div style={{margin: '0 auto', marginBottom: '100px', marginTop: '50px' }}>
+          <div
+            style={{
+              margin: "0 auto",
+              marginBottom: "100px",
+              marginTop: "50px",
+            }}
+          >
             <Carousel
               autoPlay
               infiniteLoop
@@ -91,9 +98,21 @@ function Homepage() {
               indicatorsSize="small"
               depth={2}
             >
-              {movies.map((item) => (
-                <div key={item.title}>
-                  <img src={item.image} alt={item.caption} />
+              {carousel.map((item) => (
+                <div key={item.id}>
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.caption || "carousel-image"}
+                    />
+                  ) : (
+                    item.video && (
+                      <video autoPlay muted loop>
+                        <source src={item.video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    )
+                  )}
                 </div>
               ))}
             </Carousel>
