@@ -19,7 +19,7 @@ const MovieList = () => {
 
   return (
     <div>
-        <nav className="navbar fixed-top navbar-expand-lg navbar-glass">
+        <nav className="navbar sticky-top navbar-expand-lg navbar-glass">
         <div className="container-fluid px-5">
           <a
             className="navbar-brand col-7 d-inline-flex align-items-center gap-1"
