@@ -1,26 +1,75 @@
 import "./styles/homepage.css";
 import React from "react";
+import { carousel } from "./Data/datamovie";
 import { movies } from "./Data/datamovie";
 import MovieCard from "./controller/MovieCard";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Carousel } from "react-responsive-3d-carousel";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-function Hompage() {
+
+function Homepage() {
   return (
     <div>
       <Navbar />
+
       <main>
-        <section className="container-fluid">
-          <div className="row my-4 p-5">
+        {/* <section className="container-fluid">
+          <div className="row my-10 p-5">
             <div className="d.flex flex-column align-items-center">
-              <h1 className="glowing-text">
+              <h2 className="glowing-text">
                 Apa yang ingin <br /> Anda tonton hari ini ?
-              </h1>
+              </h2>
             </div>
+          </div>
+        </section> */}
+
+        {/* Carousel Section */}
+        <section className="carousel">
+          <div
+            style={{
+              margin: "0 auto",
+              marginBottom: "100px",
+              marginTop: "50px",
+            }}
+          >
+            <Carousel
+              autoPlay
+              infiniteLoop
+              showArrows
+              showThumbs
+              showStatus
+              spread="wide"
+              interval={3000}
+              transitionTime={500}
+              width="600px"
+              height="350px"
+              indicatorsSize="small"
+              depth={2}
+            >
+              {carousel.map((item) => (
+                <div key={item.id}>
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.caption || "carousel-image"}
+                    />
+                  ) : (
+                    item.video && (
+                      <video autoPlay muted loop>
+                        <source src={item.video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    )
+                  )}
+                </div>
+              ))}
+            </Carousel>
           </div>
         </section>
 
-        <section className="container-fluid px-xl-5 px-sm-4">
-          <div className="row justify-content-xl-start justify-content-center">
+        <section className="container-fluid px-xl-3 px-sm-5 justify-content-center">
+          <div className="row justify-content-xl-start ">
             {movies.map((movie, index) => (
               <MovieCard key={index} movie={movie} />
             ))}
@@ -108,4 +157,4 @@ function Hompage() {
   );
 }
 
-export default Hompage;
+export default Homepage;

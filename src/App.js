@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Homepage from "./components/Hompage";
+import Homepage from "./components/Homepage";
 import Booking from "./components/Booking";
 import PayCard from "./components/Payment/PayCard";
 import GoPayPage from './components/Payment/GoPay';
@@ -8,6 +8,7 @@ import QrisPage from './components/Payment/Qris';  // Correct import for QrisPag
 import DanaPage from './components/Payment/Dana';  // Correct import for DanaPage
 import DetailMovie from "./components/DetailMovie";
 import Login from "./components/Login";
+import MovieList from "./components/MovieList";
 
 const App = () => {
   return (
@@ -25,6 +26,10 @@ const App = () => {
         <Route path="/gopay" element={<GoPayPage />} />
         <Route path="/qris" element={<QrisPage />} />
         <Route path="/dana" element={<DanaPage />} />
+        <Route path="/movielist" element={<MovieList />} />
+        {/* Routes for Payment Methods */}
+       
+
       </Routes>
     </Router>
   );

@@ -1,6 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Payment.css';
+import danaImage from "./img/danaa.jpg";
+import gopayImage from "./img/gopayy.jpg" 
+import qrisImage from "./img/qris.png" 
+import cardImage from "./img/carddd.png" 
 
 const Dana = () => {
   const navigate = useNavigate();
@@ -14,36 +18,43 @@ const Dana = () => {
 
   return (
     <div className="payment-container">
-      <form className="payment-form" onSubmit={handleSubmit}>
-        <div className="secure-section">
-          <img src="https://via.placeholder.com/30x30" alt="Secure icon" />
-          <span>Payment Method</span>
-        </div>
-
+      <div className="pilih-metode">
+        <h2>Choose Your Payment Method</h2>
         <div className="payment-methods">
-          <button type="button" onClick={() => navigate('/card')}>Card</button>
-          <button type="button" onClick={() => navigate('/gopay')}>GoPay</button>
-          <button type="button" onClick={() => navigate('/qris')}>QRIS</button>
-          <button type="button" onClick={() => navigate('/dana')}>DANA</button>
+          <button className="dana-btn" type="button" onClick={() => navigate('/dana')}>
+            <img src={danaImage} alt="Dana" />
+          </button>
+          <button className="card-btn" type="button" onClick={() => navigate('/card')}>
+            <img src={cardImage} alt="Card" />
+          </button>
+          <button className="gopay-btn" type="button" onClick={() => navigate('/gopay')}>
+            <img src={gopayImage} alt="GoPay" />
+          </button>
+          <button className="qris-btn" type="button" onClick={() => navigate('/qris')}>
+            <img src={qrisImage} alt="QRIS" />
+          </button>
         </div>
+      </div>
 
+      <form className="payment-form" onSubmit={handleSubmit}>
         <div className="bayar">
-          <h2>DANA</h2>
-          <div className="dana-bayar">
-            <img src="https://via.placeholder.com/265x280" alt="QR Code" />
-          </div>
+          <div className="gopay-pembayaran"></div>
 
           <div className="total-pembayaran">
-            <p>You’re paying,</p>
-            <h1>Rp 140.000</h1>
-            <p>2 Regular Tickets</p>
+            <h1>Harga</h1>
+            <p>Regular Tickets</p>
+            <div className="total">
+              <p></p>
+              <p>2 × Rp 70.000</p>
+            </div>
+            <p>Bangku A1&A3</p>
             <div className="total">
               <p>Total</p>
-              <p>$100.00</p>
+              <p>$150.00</p>
             </div>
           </div>
         </div>
-
+        
         <button className="btn-gopay" type="submit">Pay Now</button>
       </form>
     </div>
