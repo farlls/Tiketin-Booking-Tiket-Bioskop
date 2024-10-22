@@ -1,12 +1,3 @@
-body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #0a0a1f 0%, #1a1a3a 25%, #0f0f2f 50%, #050510 75%, #000000 100%);
-}
-
 .payment-container {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px; /* Reduced border radius */

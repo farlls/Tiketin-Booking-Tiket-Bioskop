@@ -6,7 +6,7 @@ const MovieCard = ({ movie }) => {
 
     const handleBookClick = () => {
         // Mengarahkan ke halaman booking dengan parameter movie title
-        navigate(`/booking?movie=${movie.title}`);
+        navigate(`/detail-movie`);
     };
 
     return (

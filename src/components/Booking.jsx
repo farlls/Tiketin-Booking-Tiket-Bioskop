@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 function Booking() {
   const location = useLocation();
@@ -15,6 +16,7 @@ function Booking() {
 
   return (
     <div>
+      <Navbar />
       <h1>Booking Page</h1>
       <p>You are booking a ticket for: {movieTitle}</p>
       <button onClick={handlePaymentClick}>Proceed to Payment</button>
