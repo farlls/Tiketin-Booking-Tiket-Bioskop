@@ -1,3 +1,4 @@
+import Navbar from '../Navbar';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Payment.css';
@@ -20,6 +21,8 @@ const PayCard = () => {
 
   return (
     <div className="payment-container">
+      <Navbar/>
+      <div className="payment">
         <div className="pilih-metode">
         <h2>Choose Your Payment Method</h2>
         <div className="payment-methods">
@@ -69,7 +72,7 @@ const PayCard = () => {
                     type="text"
                     value={cardNumber}
                     onChange={(e) => setCardNumber(e.target.value)}
-                  />
+                    />
                 </div>
               </div>
 
@@ -99,6 +102,7 @@ const PayCard = () => {
             </div>
           </form>
         </div>
+      </div>
       </div>
     </div>
   );
