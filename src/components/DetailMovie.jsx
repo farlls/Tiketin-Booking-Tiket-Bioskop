@@ -10,13 +10,13 @@ function DetailMovie() {
       <Navbar />
       <section className="container-fluid p-5">
         <div className="row align-content-center gx-xl-5 gx-lg-3 g-sm-2">
-          <div className="col-3 detailmovie-container-img">
+          <div className="col-lg-3 col-sm-4 detailmovie-container-img mb-3">
             <img
               src="assets/img/avatar.jpg"
               className="img-fluid detailmovie-img"
             ></img>
           </div>
-          <div className="col-9 justify-content-around align-content-center">
+          <div className="col-lg-9 col-sm-7 justify-content-around align-content-center">
             <h1 className="detailmovie-title">Avatar: The Way of Water</h1>
             <div className="d-flex flex-row flex-wrap">
               <div className="d-inline-flex m-1 p-1 detailmovie-container-glass justify-content-center align-items-center">
@@ -44,7 +44,7 @@ function DetailMovie() {
         </div>
       </section>
       <section className="container-fluid px-5">
-        <div className="d-flex flex-row justify-content-around gap-2">
+        <div className="d-flex flex-row justify-content-around gap-2 flex-wrap">
           <div className="d-flex flex-grow-1 detailmovie-glass-effect flex-column justify-content-start align-content-center gap-1">
             <h2 className="fs-6">Nama Bioskop</h2>
             <select
@@ -92,7 +92,7 @@ function DetailMovie() {
           </div>
         </div>
         <div className="d-flex flex-row detailmovie-glass-effect my-2 p-4">
-          <div className="d-inline-flex flex-column">
+          <div className="d-inline-flex flex-column ">
             <h2 className="fs-4 mb-4">Select Your Sheats</h2>
             <div className="d-flex flex-column">
               <div className="d-inline-flex flex-row justify-content-between align-content-cente">
@@ -119,7 +119,9 @@ function DetailMovie() {
               <button
                 type="button"
                 className="btn btn-glass btn-glass-primary fw-bold mt-2"
-              >BUY YOUR TICKET</button>
+              >
+                BUY YOUR TICKET
+              </button>
             </div>
           </div>
           <div className="d-flex"></div>
