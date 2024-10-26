@@ -10,6 +10,7 @@ import DanaPage from "./components/Payment/Dana"; // Correct import for DanaPage
 import DetailMovie from "./components/DetailMovie";
 import Login from "./components/Login";
 import MovieList from "./components/MovieList";
+import Ticket from "./components/Ticket";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/dana" element={<DanaPage />} />
           <Route path="/movielist" element={<MovieList />} />
           {/* Routes for Payment Methods */}
+          <Route path="/ticket" element={<Ticket/>} />
         </Routes>
       </Router>
     </AuthProvider>

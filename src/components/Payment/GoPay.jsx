@@ -7,6 +7,7 @@ import gopayImage from "./img/gopayy.jpg";
 import qrisImage from "./img/qris.png";
 import cardImage from "./img/carddd.png";
 import qr from "./img/qr.jpg"
+
 const GoPay = () => {
   const navigate = useNavigate();
 

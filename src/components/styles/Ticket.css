@@ -1,0 +1,159 @@
+.ticketContent {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    overflow: hidden;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.ticketHeader {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.ticketContent {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(10, 10, 31, 0.3);
+    color: #fff;
+    padding: 15px;
+}
+
+.ticketInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posterImage {
+    width: 150px;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.rightSection {
+    flex: 1;
+    padding-left: 15px;
+    display: flex;
+}
+
+.infoText {
+    font-size: 18px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoText2 {
+    font-size: 18px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 4rem;
+}
+
+.ticketDetails {
+    display: flex;
+    background: rgba(157, 13, 253, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detailRow {
+    text-align: center;
+    margin-top: -2.5rem;
+}
+
+.qrSection {
+    text-align: center;
+}
+
+.qrCode {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.qrticket {
+    background-color: rgba(157, 13, 253, 0.3);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.orderNumber {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .ticketContent {
+        padding: 10px;
+    }
+
+    .ticketHeader {
+        padding: 8px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .posterImage {
+        width: 120px;
+        height: 150px;
+    }
+
+    .infoText, .infoText2 {
+        font-size: 16px;
+    }
+
+    .orderNumber {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .ticketContent {
+        padding: 5px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .posterImage {
+        width: 100px;
+        height: 130px;
+    }
+
+    .infoText, .infoText2 {
+        font-size: 14px;
+    }
+
+    .orderNumber {
+        font-size: 8px;
+    }
+}

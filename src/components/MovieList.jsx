@@ -3,6 +3,7 @@ import { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { movies } from './Data/datamovie';
 import MovieCard from './controller/MovieCard';
+import Navbar from './Navbar';
 
 const MovieList = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,7 +20,8 @@ const MovieList = () => {
 
   return (
     <div>
-        <nav className="navbar sticky-top navbar-expand-lg navbar-glass">
+      <Navbar/>
+        {/* <nav className="navbar sticky-top navbar-expand-lg navbar-glass">
         <div className="container-fluid px-5">
           <a
             className="navbar-brand col-7 d-inline-flex align-items-center gap-1"
@@ -71,7 +73,7 @@ const MovieList = () => {
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> */}
     
       {/* MovieList */}
       <section className="container-fluid px-xl-5 px-sm-4 py-4">

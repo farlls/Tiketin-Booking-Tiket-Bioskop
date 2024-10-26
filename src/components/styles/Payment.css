@@ -10,6 +10,7 @@
     margin: auto;
     margin-top: 1rem;
     display: flex;
+    overflow: hidden;
 }
 
 .pilih-metode {
@@ -275,3 +276,142 @@
     background-color: #374151;
     
 }
+/* Media Queries untuk Responsif */
+/* Media Queries untuk Responsif */
+@media (max-width: 1200px) {
+    .payment {
+     gap: 3px;
+    }
+
+    .bayar {
+        flex-direction: column; /* Mengatur arah flex menjadi kolom untuk responsif */
+        align-items: center; /* Menyelaraskan elemen di tengah */
+    }
+
+    .gopay-pembayaran {
+        width: 90%; /* Mengatur lebar gambar QR menjadi 90% */
+        max-width: 200px; /* Mengatur lebar maksimum gambar QR */
+        height: auto; /* Mengatur tinggi otomatis */
+    }
+
+    .gopay-pembayaran img {
+        width: 100%; /* Gambar akan mengambil lebar penuh dari kontainer */
+        height: auto; /* Menjaga rasio aspek */
+    }
+
+    .total-pembayaran {
+        width: 90%; /* Mengatur lebar total pembayaran menjadi 90% */
+        max-width: 300px; /* Mengatur lebar maksimum total pembayaran */
+    }
+
+    .total-pembayaran h1 {
+        font-size: 20px; /* Mengurangi ukuran font untuk judul total pembayaran */
+    }
+
+    .total-pembayaran p {
+        font-size: 12px; /* Mengurangi ukuran font untuk paragraf */
+    }
+
+    .total {
+        font-size: 14px; /* Mengurangi ukuran font untuk total */
+    }
+
+    .btn-gopay {
+        /* padding: 10px 20px; */
+        font-size: 16px; /* Mengurangi ukuran font tombol Gopay */
+        width: 100%; /* Membuat tombol lebar penuh */
+    }
+
+    .pilih-metode {
+        width: 40%; /* Mengurangi lebar metode pembayaran */
+        height: 71vh;
+        margin-top: 25px;
+    }
+
+    .pilih-metode h2 {
+        font-size: 16px; /* Mengurangi ukuran font judul */
+    }
+
+    .payment-methods {
+        display: flex;
+        flex-direction: column; /* Memastikan tombol ditampilkan dalam kolom */
+        gap: 20px; /* Mengurangi jarak antar tombol */
+        margin: 1rem; /* Mengurangi margin */
+    }
+
+    .payment-methods button {
+        height: 8vh; /* Mengurangi tinggi tombol */
+        font-size: 12px; /* Mengurangi ukuran font tombol */
+        padding: 0; /* Menghapus padding untuk memperkecil ukuran */
+        width: 26%;
+    }
+
+    .payment-methods button img {
+        width: 100%;
+        height: 8vh; /* Membiarkan tinggi gambar otomatis */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .btn-gopay {
+        font-size: 12px; /* Mengurangi ukuran font tombol Gopay */
+        max-width: 200px; /* Mengatur lebar maksimum tombol */
+    }
+    .payment-form{
+        height: auto;
+        width: 58%;
+    }
+
+    .gopay-pembayaran {
+        max-width: 100px; /* Mengatur lebar maksimum gambar QR lebih kecil */
+    }
+
+    .gopay-pembayaran img {
+        width: 100px; /* Gambar akan mengambil lebar penuh dari kontainer */
+        height: auto; /* Menjaga rasio aspek */
+    }
+
+
+    .btn-gopay {
+        width: 50%;
+        padding: 8px 15px; /* Mengurangi padding tombol Gopay */
+        font-size: 14px; /* Mengurangi ukuran font tombol Gopay */
+    }
+
+
+    
+    .card-form-container {
+        max-width: 90%; /* Lebar maksimum kontainer form lebih kecil pada layar kecil */
+        padding: 10px; 
+        margin-left: 2px;
+    }
+
+    .card-info h4 {
+        font-size: 18px; /* Ukuran font nama lebih kecil */
+    }
+
+    .card-info p {
+        font-size: 14px; /* Ukuran font informasi kartu lebih kecil */
+    }
+
+    .input-group label {
+        font-size: 12px; /* Ukuran font label lebih kecil */
+    }
+
+    .input-group input {
+        padding: 8px; /* Padding input lebih kecil */
+    }
+
+    .form-actions button {
+        padding: 8px 12px; /* Mengurangi padding tombol */
+        font-size: 14px; /* Mengurangi ukuran font tombol */
+    }
+
+
+
+}
+
+
+
+

@@ -3,8 +3,13 @@ import "./styles/DetailMovie.css";
 import Navbar from "./Navbar";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+const DetailMovie = () => {
+  const navigate = useNavigate();
 
-function DetailMovie() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div>
       <Navbar />
@@ -104,6 +109,7 @@ function DetailMovie() {
                   height="25"
                 />
               </div>
+              
               <div className="d-inline-flex flex-row justify-content-between align-content-center">
                 <p className="fs-6 fw-light ">Date Time</p>
                 <p className="fs-6 fw-light ">12/12/2024, 20.20 WIB</p>
@@ -116,12 +122,9 @@ function DetailMovie() {
                 <p className="fs-5 fw-bold">Total</p>
                 <p className="fs-5 fw-bold">Rp. 85.000</p>
               </div>
-              <button
-                type="button"
-                className="btn btn-glass btn-glass-primary fw-bold mt-2"
-              >
-                BUY YOUR TICKET
-              </button>
+              <button className="btn btn-glass btn-glass-primary fw-bold mt-2" type="button" onClick={() => navigate('/card')}>
+              BUY YOUR TICKET
+          </button>
             </div>
           </div>
           <div className="d-flex"></div>
@@ -129,5 +132,5 @@ function DetailMovie() {
       </section>
     </div>
   );
-}
+};
 export default DetailMovie;
