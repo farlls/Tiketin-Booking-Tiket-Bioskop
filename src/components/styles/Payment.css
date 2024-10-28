@@ -413,5 +413,100 @@
 }
 
 
-
-
+/* ////
+POPUP */
+/* Background overlay */
+/* Background overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out; /* Animasi fade-in */
+  }
+  
+  /* Konten pop-up */
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    color: #212121;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    transform: scale(0.8); /* Memulai dengan ukuran kecil */
+    animation: zoomIn 0.4s ease forwards; /* Animasi zoom-in */
+  }
+  
+/* Lingkaran centang hijau dengan animasi */
+.checkmark-circle {
+    background-color: #7928CA;
+    border-radius: 50%;
+    width: 60px; /* Perbesar lingkaran */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+    animation: rotateCheck 0.5s ease forwards;
+  }
+  
+  .checkmark {
+    width: 25px; /* Perbesar ukuran centang */
+    height: 15px;
+    border: solid #fff;
+    border-width: 0 4px 4px 0; /* Perbesar ketebalan border */
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: drawCheck 0.3s 0.3s ease forwards;
+  }
+  
+  
+  /* Tombol tutup */
+  .close-btn {
+    margin-top: 15px;
+    background-color: #7928CA;
+    color: #000000;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .close-btn:hover {
+    background-color: rgba(157, 13, 253, 1); 
+  }
+  
+  /* Animasi keyframes */
+  
+  /* Fade-in untuk overlay */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Zoom-in untuk pop-up */
+  @keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Rotate untuk lingkaran centang */
+  @keyframes rotateCheck {
+    from { transform: rotate(-90deg); opacity: 0; }
+    to { transform: rotate(0); opacity: 1; }
+  }
+  
+  /* Draw check untuk tanda centang */
+  @keyframes drawCheck {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  

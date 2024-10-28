@@ -1,21 +1,27 @@
-import React from "react";
-import Navbar from "../Navbar";
-import { useNavigate } from "react-router-dom";
-import "../styles/Payment.css";
-import danaImage from "./img/danaa.jpg";
-import gopayImage from "./img/gopayy.jpg";
-import qrisImage from "./img/qris.png";
-import cardImage from "./img/carddd.png";
-import qr from "./img/qr.jpg"
+import React, { useState } from "react"; // Import React dan useState
+import Navbar from "../Navbar"; // Import komponen Navbar
+import { useNavigate } from "react-router-dom"; // Import useNavigate untuk navigasi
+import "../styles/Payment.css"; // Import CSS untuk styling
+import Popup from "./Popup"; // Impor komponen Popup
+import danaImage from "./img/danaa.jpg"; // Import gambar Dana
+import gopayImage from "./img/gopayy.jpg"; // Import gambar GoPay
+import qrisImage from "./img/qris.png"; // Import gambar QRIS
+import cardImage from "./img/carddd.png"; // Import gambar Kartu
+import qr from "./img/qr.jpg"; // Import gambar QR untuk pembayaran
 
 const GoPay = () => {
-  const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false); // State untuk mengontrol pop-up
+  const navigate = useNavigate(); // Inisialisasi fungsi navigasi
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Show alert and navigate to home
-    alert("GoPay Payment Submitted");
-    navigate("/");
+    // Tampilkan pop-up
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+    navigate("/"); // Navigasi ke halaman utama setelah menutup pop-up
   };
 
   return (
@@ -60,7 +66,6 @@ const GoPay = () => {
             <div className="gopay-pembayaran">
               <img src={qr} alt="Gopay" />
             </div>
-
             <div className="total-pembayaran">
               <h1>Harga</h1>
               <p>Regular Tickets</p>
@@ -80,6 +85,9 @@ const GoPay = () => {
             Pay Now
           </button>
         </form>
+
+        {/* Render Pop-Up */}
+        {showPopup && <Popup message="GoPay Payment Submitted" onClose={handleClosePopup} />}
       </div>
     </div>
   );
