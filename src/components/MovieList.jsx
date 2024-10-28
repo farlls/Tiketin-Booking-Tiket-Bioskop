@@ -77,7 +77,7 @@ const MovieList = () => {
     
       {/* MovieList */}
       <section className="container-fluid px-xl-5 px-sm-4 py-4">
-        <div className="row justify-content-xl-start justify-content-center">
+        <div className="row px-xl-3 px-sm-5 d-flex justify-content-center">
           {currentMovies.map((movie, index) => (
             <MovieCard key={index} movie={movie} />
           ))}
@@ -92,7 +92,13 @@ const MovieList = () => {
             <button 
               className="page-link" 
               onClick={() => setCurrentPage(currentPage - 1)} 
-              disabled={currentPage === 1}>
+              disabled={currentPage === 1}
+              style={{
+                backgroundColor: currentPage === 1 ? "#555" : "#6f42c1", // ungu untuk aktif
+                color: "#fff",
+                border: "none",
+                cursor: currentPage === 1 ? "not-allowed" : "pointer",
+              }}>
               Previous
             </button>
           </li>
@@ -100,7 +106,12 @@ const MovieList = () => {
           {/* Halaman */}
           {[...Array(totalPages)].map((_, i) => (
             <li key={i} className={`page-item ${currentPage === i + 1 ? "active" : ""}`}>
-              <button className="page-link" onClick={() => setCurrentPage(i + 1)}>
+              <button className="page-link" onClick={() => setCurrentPage(i + 1)}
+                 style={{
+                  backgroundColor: currentPage === i + 1 ? "#6f42c1" : "#444", // warna ungu untuk halaman aktif
+                  color: "#fff",
+                  border: "none",
+                }}>
                 {i + 1}
               </button>
             </li>
@@ -111,7 +122,13 @@ const MovieList = () => {
             <button 
               className="page-link" 
               onClick={() => setCurrentPage(currentPage + 1)} 
-              disabled={currentPage === totalPages}>
+              disabled={currentPage === totalPages}
+              style={{
+                backgroundColor: currentPage === totalPages ? "#555" : "#6f42c1", // warna ungu untuk aktif
+                color: "#fff",
+                border: "none",
+                cursor: currentPage === totalPages ? "not-allowed" : "pointer",
+              }}>
               Next
             </button>
           </li>
