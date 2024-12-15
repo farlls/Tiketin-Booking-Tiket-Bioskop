@@ -5,8 +5,9 @@ import { movies } from "./Data/datamovie";
 import MovieCard from "./controller/MovieCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-responsive-3d-carousel";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+
 
 function Homepage() {
   return (
