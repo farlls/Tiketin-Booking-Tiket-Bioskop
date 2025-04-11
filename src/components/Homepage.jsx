@@ -96,7 +96,7 @@ function Homepage() {
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
-              </div>
+              </div>                               
               <div className="modal-body">
                 <div className="mb-3">
                   <label htmlFor="movieTitle" className="form-label">
